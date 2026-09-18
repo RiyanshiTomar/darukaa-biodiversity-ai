@@ -228,7 +228,7 @@ Use the instructions above. This is the easiest way to run and demonstrate the p
 2. Create a new cloud app service for the FastAPI backend.
 3. Set the build command:
    ```bash
-   pip install -r requirements.txt && python knowledge_base/build_index.py
+   pip install -r requirements-backend.txt && python knowledge_base/build_index.py
    ```
 4. Set the runtime command. `$PORT` is required because Render assigns it:
    ```bash
@@ -242,6 +242,11 @@ The hosted backend intentionally uses dependency-free lexical retrieval instead
 of FAISS/SentenceTransformers so it can start within Render's 512 MB free-tier
 memory limit. The evidence remains grounded in `knowledge_base/kb_data.json`;
 the LLM is still used only for the final explanation and recommendations.
+
+For Streamlit Community Cloud, set the dependency file to
+`ui/requirements.txt` (or deploy with `ui/app.py` so Streamlit detects that
+file). The frontend needs only Streamlit and Requests; backend-only packages
+stay in `requirements-backend.txt`.
 
 ### Option C: Streamlit cloud demo
 

@@ -41,6 +41,30 @@ st.markdown(
     section[data-testid="stSidebar"] > div {
         background: #ffffff;
     }
+    section[data-testid="stSidebar"],
+    section[data-testid="stSidebar"] * {
+        color: #1f2a1f !important;
+    }
+    section[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] p,
+    section[data-testid="stSidebar"] [data-testid="stCaptionContainer"] p,
+    section[data-testid="stSidebar"] label {
+        color: #1f2a1f !important;
+        opacity: 1 !important;
+    }
+    section[data-testid="stSidebar"] input,
+    section[data-testid="stSidebar"] textarea,
+    section[data-testid="stSidebar"] [role="combobox"] {
+        color: #1f2a1f !important;
+        background: #f7faf6 !important;
+        -webkit-text-fill-color: #1f2a1f !important;
+        opacity: 1 !important;
+    }
+    section[data-testid="stSidebar"] button {
+        color: #ffffff !important;
+        background: #1f7a4d !important;
+        border-color: #1f7a4d !important;
+        opacity: 1 !important;
+    }
     .hero {
         text-align: center;
         padding: 1.5rem 1rem 0.8rem 1rem;
@@ -137,6 +161,12 @@ st.markdown(
         section[data-testid="stSidebar"] [data-testid="stSidebarContent"] {
             background: #ffffff;
             opacity: 1;
+        }
+        section[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] p,
+        section[data-testid="stSidebar"] [data-testid="stCaptionContainer"] p,
+        section[data-testid="stSidebar"] label {
+            color: #1f2a1f !important;
+            opacity: 1 !important;
         }
         .stTextInput > div > div > input,
         .stSelectbox > div > div > div {

@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Byte-compile all Python files
+        run: python -m py_compile knowledge_base/build_index.py rag/retriever.py rag/reasoning_engine.py backend/main.py ui/app.py
+
+      - name: Validate knowledge base schema
+        run: |
+          python - <<'EOF'
+          import json, sys
+
+          REQUIRED_FIELDS = {"id", "category", "topic", "content", "metrics_affected", "source"}
+
+          with open("knowledge_base/kb_data.json") as f:
+              records = json.load(f)
+
+          errors = []
+          seen_ids = set()
+          for i, r in enumerate(records):
+              missing = REQUIRED_FIELDS - r.keys()
+              if missing:
+                  errors.append(f"Record {i} missing fields: {missing}")
+              if r.get("id") in seen_ids:
+                  errors.append(f"Duplicate id: {r.get('id')}")
+              seen_ids.add(r.get("id"))
+
+          if errors:
+              print("KB schema validation FAILED:")
+              for e in errors:
+                  print(" -", e)
+              sys.exit(1)
+          print(f"KB schema OK ({len(records)} records validated).")
+          EOF

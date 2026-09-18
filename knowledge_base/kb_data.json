@@ -1,0 +1,169 @@
+[
+  {
+    "id": "kb001",
+    "category": "soil_health",
+    "topic": "Legume cover crops and soil organic carbon",
+    "content": "Introducing legume-based cover crops (e.g. vetch, cowpea, clover) between or after main crop cycles fixes atmospheric nitrogen and adds root/shoot biomass to soil, stimulating microbial transformation pathways that build stable mineral-associated and particulate organic carbon.",
+    "metrics_affected": ["soil_organic_carbon", "microbial_diversity", "nitrogen_availability"],
+    "quantified_impact": "Global meta-analysis (3160 observations, 271 studies): legume cover crops increase soil organic carbon by +5.9% on average vs +4.0% for non-legume cover crops, and raise yields by ~16%. Orchard-level field studies report much larger localized SOC gains (+23% to +38%) alongside microbial biomass carbon increases of ~105%.",
+    "caveat": "Legume cover crops can raise N2O emissions (~+36% in the same meta-analysis) if not paired with no-till or diversified rotation.",
+    "source": "He et al. 2025, npj Sustainable Agriculture, DOI 10.1038/s44264-025-00050-8; Hu et al. 2023/2024, Soil & Tillage Research / Geoderma",
+    "time_horizon": "medium (2-3 years)",
+    "confidence": "high"
+  },
+  {
+    "id": "kb002",
+    "category": "land_use",
+    "topic": "Agroforestry / intercropping in semi-arid and low-SOC land",
+    "content": "Converting monoculture cropland to agroforestry or intercropping (integrating trees/shrubs with row crops) adds deep root carbon input, reduces wind erosion, moderates soil microclimate and increases structural habitat diversity for insects, birds and soil fauna.",
+    "metrics_affected": ["soil_organic_carbon", "habitat_diversity", "species_richness", "soil_moisture"],
+    "quantified_impact": "Global meta-analysis (858 data points, 78 studies): converting agriculture to agroforestry increases SOC stocks by +27% in arid/semi-arid regions specifically (vs +26% humid tropics, +5.8% temperate). A separate 53-study meta-analysis found +26%, +40%, +34% SOC stock increases at 0-15cm, 0-30cm and 0-100cm depth respectively. In semi-arid West Africa, presence of shrubs/trees on fields raised soil total carbon by +20% to +75%.",
+    "caveat": "Benefits compound with tree age — systems 10-20 years old outperform newly established ones; species selection matters for water competition in low-rainfall zones.",
+    "source": "Chatterjee et al. 2018, Agricultural Systems (meta-analysis); De Stefano & Jacobson 2017, Agroforestry Systems; Félix et al. 2018, Agronomy for Sustainable Development",
+    "time_horizon": "medium to long (3-10 years)",
+    "confidence": "high"
+  },
+  {
+    "id": "kb003",
+    "category": "biodiversity",
+    "topic": "Habitat fragmentation from monoculture expansion",
+    "content": "Large-scale monoculture removes structural and floral heterogeneity, breaking continuous habitat into small, isolated patches. This reduces effective population sizes, limits gene flow, and disproportionately affects species with large home ranges or low dispersal ability.",
+    "metrics_affected": ["species_richness", "habitat_diversity", "genetic_connectivity"],
+    "quantified_impact": "IPBES Global Assessment (2019) identifies land-use change, dominated by conversion to intensive monoculture agriculture, as the single largest driver of terrestrial biodiversity loss worldwide, ahead of climate change and pollution.",
+    "source": "IPBES Global Assessment Report on Biodiversity and Ecosystem Services, 2019",
+    "time_horizon": "long (structural, reverses only over years-decades of habitat reconnection)",
+    "confidence": "high"
+  },
+  {
+    "id": "kb004",
+    "category": "human_impact",
+    "topic": "Riparian buffer strips and water quality / species survival",
+    "content": "Planting vegetated buffer strips (grasses, shrubs, trees) along waterways intercepts sediment, nitrogen and phosphorus runoff before it reaches streams, protecting aquatic invertebrate and fish populations and stabilizing bank habitat.",
+    "metrics_affected": ["water_quality", "species_richness_aquatic", "soil_erosion"],
+    "quantified_impact": "FAO and USDA NRCS field studies report well-established riparian buffers (10-30m width) typically remove 50-90% of sediment and 30-70% of nitrogen/phosphorus in surface runoff before it reaches waterways, directly benefiting downstream aquatic species diversity.",
+    "source": "FAO, 'Riparian buffers and water quality' technical guidance; USDA NRCS Conservation Practice Standards",
+    "time_horizon": "short to medium (1-3 years for vegetation establishment, ongoing benefit after)",
+    "confidence": "medium-high"
+  },
+  {
+    "id": "kb005",
+    "category": "soil_health",
+    "topic": "No-till / reduced tillage and soil moisture retention",
+    "content": "Avoiding or reducing mechanical tillage preserves soil structure and surface residue cover, reducing evaporation and increasing water infiltration, which is especially valuable under low or erratic rainfall.",
+    "metrics_affected": ["soil_moisture", "soil_organic_carbon", "erosion"],
+    "quantified_impact": "FAO Conservation Agriculture programs report no-till with residue retention can improve plant-available soil moisture by roughly 10-30% relative to conventional tillage in semi-arid trials, alongside reduced erosion.",
+    "source": "FAO Conservation Agriculture technical resources",
+    "time_horizon": "short (within 1 growing season for moisture; multi-year for SOC)",
+    "confidence": "medium"
+  },
+  {
+    "id": "kb006",
+    "category": "biodiversity",
+    "topic": "Native hedgerows and pollinator diversity",
+    "content": "Planting native flowering hedgerows along field margins provides forage and nesting habitat for wild pollinators and natural pest predators, increasing beneficial insect abundance in adjacent crop fields.",
+    "metrics_affected": ["pollinator_diversity", "species_richness", "pest_regulation"],
+    "quantified_impact": "Multiple field studies compiled by FAO's Pollination Services assessments show hedgerow restoration can increase wild bee species richness by 2-3x within 1-2 seasons and improve pollination-dependent crop yields by 20-40% in adjacent fields.",
+    "source": "FAO, 'Pollinators and Pollination' assessments; IPBES Pollinators Assessment 2016",
+    "time_horizon": "short to medium (1-2 years)",
+    "confidence": "medium-high"
+  },
+  {
+    "id": "kb007",
+    "category": "climate",
+    "topic": "Rainfall variability and species distribution shifts",
+    "content": "Increasing rainfall variability (more intense but less frequent events) reduces the reliability of soil moisture for shallow-rooted native species, favoring drought-tolerant or invasive species and altering community composition over time.",
+    "metrics_affected": ["species_richness", "soil_moisture", "community_composition"],
+    "quantified_impact": "IPCC AR6 WGII regional chapters document that increasing rainfall intensity/variability in semi-arid regions is already shifting native plant and pollinator community composition, with drought-sensitive species most affected.",
+    "source": "IPCC AR6 Working Group II Report, 2022",
+    "time_horizon": "long (decadal)",
+    "confidence": "high"
+  },
+  {
+    "id": "kb008",
+    "category": "human_impact",
+    "topic": "Deforestation and biodiversity/carbon loss",
+    "content": "Clearing forest for agriculture releases stored soil and biomass carbon rapidly and eliminates habitat structure that many forest-dependent species require, with effects extending into adjacent unconverted land through edge effects.",
+    "metrics_affected": ["soil_organic_carbon", "species_richness", "habitat_diversity"],
+    "quantified_impact": "FAO Global Forest Resources Assessment 2020 estimated global net forest loss of ~4.7 million hectares/year (2010-2020), a primary driver of terrestrial biodiversity decline tracked in the WWF Living Planet Index.",
+    "source": "FAO Global Forest Resources Assessment 2020; WWF Living Planet Report",
+    "time_horizon": "immediate loss, long-term (decades) recovery",
+    "confidence": "high"
+  },
+  {
+    "id": "kb009",
+    "category": "soil_health",
+    "topic": "Crop rotation diversity and microbial / pest resilience",
+    "content": "Rotating between crop families (e.g. cereal-legume-brassica) instead of continuous monoculture disrupts pest and pathogen life cycles and diversifies root exudates, supporting a more diverse soil microbial community.",
+    "metrics_affected": ["microbial_diversity", "soil_organic_carbon", "pest_regulation"],
+    "quantified_impact": "FAO Conservation Agriculture and multiple long-term rotation trials associate diversified rotations (3+ crop families) with 15-25% reductions in pest/pathogen pressure and measurable increases in soil microbial diversity indices versus monoculture.",
+    "source": "FAO Conservation Agriculture technical guidance",
+    "time_horizon": "short to medium (1-3 years)",
+    "confidence": "medium"
+  },
+  {
+    "id": "kb010",
+    "category": "land_use",
+    "topic": "Wetland restoration and species survival",
+    "content": "Restoring degraded or drained wetlands re-establishes breeding, feeding and refuge habitat for amphibians, waterbirds and aquatic invertebrates, while also buffering downstream flood and drought extremes.",
+    "metrics_affected": ["species_richness_aquatic", "water_availability", "habitat_diversity"],
+    "quantified_impact": "Ramsar Convention and FAO wetland assessments document that restored wetlands typically recover 70-100% of original amphibian and waterbird species richness within 5-15 years, depending on connectivity to remaining wetland networks.",
+    "source": "Ramsar Convention Secretariat wetland restoration guidance; FAO wetlands and agriculture reports",
+    "time_horizon": "long (5-15 years for full community recovery)",
+    "confidence": "medium"
+  },
+  {
+    "id": "kb011",
+    "category": "soil_health",
+    "topic": "Organic amendments (compost/manure) and soil pH buffering",
+    "content": "Regular application of compost or well-decomposed manure adds organic acids and buffering capacity that moderate extreme soil pH, improving nutrient availability and microbial habitat quality.",
+    "metrics_affected": ["soil_ph", "soil_organic_carbon", "microbial_diversity"],
+    "quantified_impact": "FAO soil fertility guidance and long-term field trials report that sustained compost/manure application (5-10 t/ha/year) shifts strongly acidic or alkaline soils toward neutral by 0.3-0.8 pH units over 3-5 years while raising SOC.",
+    "source": "FAO 'Soil fertility management' technical papers",
+    "time_horizon": "medium (3-5 years)",
+    "confidence": "medium"
+  },
+  {
+    "id": "kb012",
+    "category": "climate",
+    "topic": "Mulching and soil moisture conservation in semi-arid land",
+    "content": "Applying organic mulch (crop residue, straw) over soil surface reduces direct evaporation and buffers soil temperature extremes, conserving scarce moisture in low-rainfall systems.",
+    "metrics_affected": ["soil_moisture", "soil_organic_carbon"],
+    "quantified_impact": "FAO drylands agriculture guidance reports mulching can reduce evaporative soil moisture loss by 20-50% in semi-arid conditions, directly benefiting crop and companion-species survival during dry spells.",
+    "source": "FAO Drylands and Conservation Agriculture guidance",
+    "time_horizon": "short (within one season)",
+    "confidence": "medium"
+  },
+  {
+    "id": "kb013",
+    "category": "human_impact",
+    "topic": "Pesticide overuse and pollinator/soil fauna decline",
+    "content": "Broad-spectrum pesticide overuse, beyond integrated pest management thresholds, harms non-target pollinators, natural predators and soil invertebrates that underpin nutrient cycling and pollination services.",
+    "metrics_affected": ["pollinator_diversity", "soil_fauna_diversity", "pest_regulation"],
+    "quantified_impact": "IPBES Pollinators Assessment (2016) and subsequent FAO reviews link broad-spectrum insecticide use to measurable declines in wild bee abundance and species richness in treated landscapes, often 20-45% lower than IPM-managed comparison sites.",
+    "source": "IPBES Pollinators Assessment 2016; FAO pesticide risk reduction guidance",
+    "time_horizon": "short-term harm, medium-term recovery if practice changes",
+    "confidence": "medium"
+  },
+  {
+    "id": "kb014",
+    "category": "land_use",
+    "topic": "Silvopasture (integrating trees into grazing land)",
+    "content": "Introducing scattered or alley-planted trees into pasture land provides shade (reducing livestock heat stress), leaf litter carbon input, windbreak effects, and additional structural habitat for birds and insects without removing grazing land from production.",
+    "metrics_affected": ["soil_organic_carbon", "habitat_diversity", "microclimate"],
+    "quantified_impact": "Meta-analysis of soil carbon across agroforestry systems found silvopasture among the systems showing consistent positive SOC stock change versus open pasture, with tree-age-dependent gains compounding over 10-20 years.",
+    "source": "Chatterjee et al. 2018, Agricultural Systems; De Stefano & Jacobson 2017, Agroforestry Systems",
+    "time_horizon": "medium to long (5-20 years)",
+    "confidence": "medium-high"
+  },
+  {
+    "id": "kb015",
+    "category": "human_impact",
+    "topic": "Water scarcity and species survival trade-off",
+    "content": "Declining water availability (from over-extraction or reduced rainfall) directly constrains species with narrow physiological water tolerance, cascading through food webs as primary productivity and prey availability drop.",
+    "metrics_affected": ["water_availability", "species_richness", "primary_productivity"],
+    "quantified_impact": "IPCC AR6 and FAO AQUASTAT data link regions with severe water stress (withdrawal >40% of renewable supply) to documented declines in freshwater and riparian species richness, compounding land-use pressures.",
+    "source": "IPCC AR6 WGII; FAO AQUASTAT",
+    "time_horizon": "long (decadal, compounding)",
+    "confidence": "medium-high"
+  }
+]

@@ -89,9 +89,7 @@ This supports sustainability-related reasoning across:
 - Python 3.11
 - FastAPI
 - Streamlit
-- FAISS CPU
-- sentence-transformers
-- numpy
+- lightweight token/phrase retrieval over the local knowledge base
 - python-dotenv
 - requests
 - Google GenAI / Vertex AI support
@@ -105,14 +103,11 @@ darukaa-biodiversity-ai/
 ├── backend/
 │   └── main.py                  # FastAPI app with /chat and /chat/structured
 ├── rag/
-│   ├── retriever.py             # semantic + structured retrieval logic
+│   ├── retriever.py             # lightweight lexical + structured retrieval logic
 │   └── reasoning_engine.py      # prompt building, slot detection, model routing
 ├── knowledge_base/
 │   ├── kb_data.json             # biodiversity/environment knowledge records
-│   ├── build_index.py           # builds the FAISS index from the KB
-│   └── faiss_index/
-│       ├── index.faiss
-│       └── kb_metadata.json
+│   └── build_index.py           # validates the KB (compatibility helper)
 ├── ui/
 │   └── app.py                   # Streamlit demo UI
 ├── .env.example                 # environment configuration template
@@ -155,7 +150,7 @@ Notes:
 - If using Anthropic, set `LLM_PROVIDER=anthropic` and `ANTHROPIC_API_KEY`.
 - Mistral is supported as a fallback, but may be restricted by quota or tier access.
 
-### 7.3 Build knowledge index
+### 7.3 Validate the knowledge base
 
 ```powershell
 python knowledge_base\build_index.py
@@ -231,13 +226,22 @@ Use the instructions above. This is the easiest way to run and demonstrate the p
 
 1. Push the repo to GitHub.
 2. Create a new cloud app service for the FastAPI backend.
-3. Set runtime command:
+3. Set the build command:
    ```bash
-   uvicorn backend.main:app --host 0.0.0.0 --port 8000
+   pip install -r requirements.txt && python knowledge_base/build_index.py
    ```
-4. Add all required environment variables in the hosting dashboard.
-5. Deploy the frontend separately or host a Streamlit app if desired.
-6. Update the demo link in the Word submission document.
+4. Set the runtime command. `$PORT` is required because Render assigns it:
+   ```bash
+   uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+   ```
+5. Add all required environment variables in the hosting dashboard.
+6. Deploy the frontend separately or host a Streamlit app if desired.
+7. Update the demo link in the Word submission document.
+
+The hosted backend intentionally uses dependency-free lexical retrieval instead
+of FAISS/SentenceTransformers so it can start within Render's 512 MB free-tier
+memory limit. The evidence remains grounded in `knowledge_base/kb_data.json`;
+the LLM is still used only for the final explanation and recommendations.
 
 ### Option C: Streamlit cloud demo
 

@@ -126,10 +126,12 @@ st.markdown(
             line-height: 1.45;
         }
         section[data-testid="stSidebar"] {
-            min-width: min(86vw, 320px);
-            max-width: min(86vw, 320px);
+            min-width: 100vw;
+            max-width: 100vw;
+            width: 100vw;
             background: #ffffff;
             opacity: 1;
+            z-index: 1000000;
         }
         section[data-testid="stSidebar"] > div,
         section[data-testid="stSidebar"] [data-testid="stSidebarContent"] {

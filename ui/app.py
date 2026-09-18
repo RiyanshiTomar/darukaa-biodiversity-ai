@@ -91,6 +91,56 @@ st.markdown(
         padding: 0.8rem 1rem;
         margin-bottom: 0.6rem;
     }
+    input, textarea {
+        color: #1f2a1f !important;
+        -webkit-text-fill-color: #1f2a1f !important;
+    }
+    @media (max-width: 640px) {
+        .block-container {
+            padding: 0.75rem 0.85rem 5rem 0.85rem !important;
+        }
+        .hero {
+            padding: 0.55rem 0.25rem 0.5rem 0.25rem;
+        }
+        .hero-title {
+            font-size: 1.8rem;
+            letter-spacing: -0.03em;
+        }
+        .hero-sub {
+            font-size: 0.9rem;
+            line-height: 1.35;
+        }
+        .hero-badge {
+            font-size: 0.7rem;
+            padding: 0.3rem 0.65rem;
+        }
+        div[data-testid="stChatMessage"] {
+            padding: 0.65rem 0.75rem;
+            border-radius: 12px;
+        }
+        div[data-testid="stChatMessage"] p {
+            font-size: 0.92rem;
+            line-height: 1.45;
+        }
+        section[data-testid="stSidebar"] {
+            min-width: min(86vw, 320px);
+            max-width: min(86vw, 320px);
+        }
+        .stTextInput > div > div > input,
+        .stSelectbox > div > div > div {
+            min-height: 2.6rem;
+            font-size: 0.95rem;
+        }
+        .stChatInput {
+            left: 0.65rem;
+            right: 0.65rem;
+            bottom: 0.55rem;
+            width: auto;
+        }
+        .stChatInput textarea {
+            font-size: 0.95rem;
+        }
+    }
     </style>
     """,
     unsafe_allow_html=True,

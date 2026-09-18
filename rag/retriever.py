@@ -34,14 +34,21 @@ class KnowledgeRetriever:
         with open(meta_path, "r", encoding="utf-8") as f:
             self.kb_records = json.load(f)
 
-        self.model = SentenceTransformer(EMBEDDING_MODEL)
+        # Load the model on first retrieval rather than during API import.
+        # This lets hosted platforms detect the HTTP port before model startup.
+        self.model = None
+
+    def _get_model(self):
+        if self.model is None:
+            self.model = SentenceTransformer(EMBEDDING_MODEL)
+        return self.model
 
     def retrieve(self, query: str, k: int = 4, min_score: float = 0.15):
         """
         Returns a list of dicts: {record, score}, sorted by relevance.
         min_score filters out weakly-related results (cosine similarity threshold).
         """
-        query_vec = self.model.encode([query], normalize_embeddings=True)
+        query_vec = self._get_model().encode([query], normalize_embeddings=True)
         query_vec = np.asarray(query_vec, dtype="float32")
 
         scores, indices = self.index.search(query_vec, k)

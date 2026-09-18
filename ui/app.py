@@ -35,8 +35,11 @@ st.markdown(
         color: var(--text);
     }
     section[data-testid="stSidebar"] {
-        background: rgba(255,255,255,0.78);
+        background: #ffffff;
         border-right: 1px solid var(--border);
+    }
+    section[data-testid="stSidebar"] > div {
+        background: #ffffff;
     }
     .hero {
         text-align: center;
@@ -125,6 +128,13 @@ st.markdown(
         section[data-testid="stSidebar"] {
             min-width: min(86vw, 320px);
             max-width: min(86vw, 320px);
+            background: #ffffff;
+            opacity: 1;
+        }
+        section[data-testid="stSidebar"] > div,
+        section[data-testid="stSidebar"] [data-testid="stSidebarContent"] {
+            background: #ffffff;
+            opacity: 1;
         }
         .stTextInput > div > div > input,
         .stSelectbox > div > div > div {
